@@ -1,0 +1,59 @@
+/* Umumiy */
+html{
+    box-sizing: border-box;
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before{
+    box-sizing: inherit;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Arial",sans-serif;/* Asosiy shrift */
+    font-size: 16px;/* Barcha shriftlar uchun asosiy o'lcham */
+    line-height: 1.5;/* O'qish qulayligi uchun qator balandligi */
+    color: #222; /* Matn rangi */
+    background-color: #f9f9f9; /* Fon rangi */
+
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  /* main content */
+.main-content {
+    flex-grow: 1;
+  }
+
+  /* Media Queries yordamida Retina ekranlar uchun rasm aniqligini boshqarish" */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 2/1),
+only screen and (min-device-pixel-ratio: 2),
+only screen and (min-resolution: 192dpi),
+only screen and (min-resolution: 2dppx) {
+}
+
+
+  
