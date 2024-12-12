@@ -227,10 +227,7 @@ nav {
 /* service section */
 #service {
   padding: 100px 0;
-  background-color: #ffdf6c;
-}
-#service .container {
-  background-color: whitesmoke;
+  
 }
 
 #service .section-title {
