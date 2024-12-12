@@ -90,6 +90,19 @@ img {
 .active {
   color: #21232d !important;
 }
+.section-title {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 23.81px;
+  color: #8643dc;
+}
+
+.section-info {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 47.63px;
+  color: #25202f;
+}
 
 /* Media Queries yordamida Retina ekranlar uchun rasm aniqligini boshqarish" */
 
@@ -211,6 +224,59 @@ nav {
 
 /* hero section */
 
+/* service section */
+#service {
+  padding: 100px 0;
+  background-color: #ffdf6c;
+}
+#service .container {
+  background-color: whitesmoke;
+}
+
+#service .section-title {
+  margin-bottom: 27px;
+  position: relative;
+}
+#service .section-title::after {
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 50px;
+  background-color: #8643dc;
+  bottom: -10px;
+  left: 0;
+}
+
+#service .section-info {
+  margin-bottom: 50px;
+}
+
+.service-items {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+}
+.service-items-card p {
+  text-align: justify;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 32px;
+}
+.card-top {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 22px;
+}
+.card-top span {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 31.75px;
+  color: #25202f;
+}
+
+/* service section */
+
 /* -----------------------medi query ------------- */
 
 @media (max-width: 1024px) {
@@ -240,6 +306,9 @@ nav {
     width: 100%;
     order: 2;
   }
+  .service-items{
+    grid-template-columns:  1fr 1fr;
+  }
 }
 /* header media */
 @media (max-width: 610px) {
@@ -267,14 +336,18 @@ nav {
     width: 50px;
     height: 50px;
   }
-  .hero-items-info h4 ,.hero-items-info p{
+  .hero-items-info h4,
+  .hero-items-info p {
     font-size: 18px;
   }
-  .hero-items-info h2{
+  .hero-items-info h2 {
     font-size: 40px;
   }
-  .hero-items-info button{
+  .hero-items-info button {
     font-size: 18px;
+  }
+  .service-items {
+    grid-template-columns: 1fr;
   }
 }
 
