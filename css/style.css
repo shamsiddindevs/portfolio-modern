@@ -35,6 +35,11 @@
   font-display: swap;
 }
 
+:root {
+  --mainFont: "Red Hat Display", "Arial", sans-serif;
+  --primaryFont: "Roboto", "Arial", sans-serif;
+}
+
 /* Umumiy */
 html {
   box-sizing: border-box;
@@ -46,6 +51,8 @@ html {
 *::after,
 *::before {
   box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -54,7 +61,7 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  font-family:"Red Hat Display", "Arial", sans-serif; /* Asosiy shrift */
+  font-family: var(--mainFont); /* Asosiy shrift */
   font-size: 16px; /* Barcha shriftlar uchun asosiy o'lcham */
   line-height: 1.5; /* O'qish qulayligi uchun qator balandligi */
   color: #222; /* Matn rangi */
@@ -80,9 +87,9 @@ img {
   flex-grow: 1;
 }
 
-
-
-
+.active{
+  color: #21232D !important;
+}
 
 /* Media Queries yordamida Retina ekranlar uchun rasm aniqligini boshqarish" */
 
@@ -93,3 +100,99 @@ img {
   only screen and (min-resolution: 192dpi),
   only screen and (min-resolution: 2dppx) {
 }
+
+/* header */
+
+header {
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  /* backdrop-filter: blur(50px); */
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu-left {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+}
+.menu-left ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 26.46px;
+}
+
+.menu-left ul a{
+  color: #666;
+  text-decoration: none;
+}
+
+.menu  .menu-img{
+  width: 70px;
+  height: 70px;
+  background-color: white;
+  border-radius:50% ;
+  box-shadow: 0px 20px 50px 0px #C6B9E94D;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* header */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -----------------------medi query ------------- */
+/* header media */
+
+@media (max-width:610px) {
+  header {
+    position: relative;
+  }
+  .menu ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+  }
+  .menu ul li{
+    display: block;
+  }
+
+}
+
+@media (max-width:480px) {
+  .menu .menu-img{
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* header media */
